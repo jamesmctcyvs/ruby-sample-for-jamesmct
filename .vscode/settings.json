@@ -37,7 +37,6 @@
         "**/config/environment.rb": true,
         "**/config/puma.rb": true,
         "**/config.ru": true,
-        "**/Gemfile.lock": true,
         "**/package.json": true,
         "**/Rakefile": true,
         "**/README*": true,
