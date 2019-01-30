@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>SampleRubyonrails</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+  
+  <div class="alert alert-danger alert-dismissible fade in" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <p class=""><%= notice %></p>
+      <p class=""><%= alert %></p>
+  </div>
+  
+
+  <% if current_user %>
+    Hi, <%= current_user.email %>
+      <%= link_to('登出', destroy_user_session_path, method: :delete) %> |
+      <%= link_to('修改密碼', edit_user_registration_path) %>
+    <% else %>
+      <%= link_to('註冊', new_user_registration_path) %> |
+      <%= link_to('登入', new_user_session_path) %>
+  <% end %>
+    <%= yield %>
+  </body>
+</html>

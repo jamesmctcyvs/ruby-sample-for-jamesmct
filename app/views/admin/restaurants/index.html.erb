@@ -1,0 +1,42 @@
+index後台
+
+<div class="container">
+    <div class="row">
+        <% @restaurants.each_with_index do |restaurant , index| %>
+            <div class="col-xs-12 col-sm-3">
+                <%# 可以透過render將網頁拆分,並透過 變數:傳入值 來將值傳入拆分的頁面 %>
+                    <%# render 'restaurant/card/thumbnail', restaurants: restaurant %>
+                        <div class="thumbnail">
+                  
+                            <%#= f.label :image, "Photo", {class:"control-label"} %>
+                            <%= image_tag restaurant.file_location, size: "250x250", class: "img-thumbnail" if restaurant.images?%>
+                            <%#= f.file_field :image, {class:"form-control"} %>
+                            <div class="caption">
+                                <h2>
+                                    <%= "#{index+1}.#{restaurant.name}" %>
+                                </h2>
+                                <p>
+                                    <%= restaurant.description %>
+                                </p>
+                                <p>
+                                    <%= restaurant.tel %>
+                                </p>
+                                <p>
+                                    <%= restaurant.opening_hours %>
+                                </p>
+                                <p>
+                                    <%= restaurant.address %>
+                                </p>
+                                <div>
+                                    <%= link_to("Edit", edit_admin_restaurant_path(id: restaurant.id), {method:"get", class:"btn btn-info btn-block"}) %>
+                                    <%= link_to("Del",  admin_restaurant_path(id: restaurant.id), {method:"delete", data:{confirm: "確認刪除"}, class:"btn btn-info btn-block"}) %>
+                                    
+                                </div>
+                            </div>
+                            <!-- thumbnail-->
+                        </div>
+            </div>
+            <!-- row -->
+            <% end %>
+    </div>
+    <!--Container -->

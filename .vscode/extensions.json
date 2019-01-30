@@ -1,0 +1,30 @@
+{
+    "recommendations": [
+        "ritwickdey.liveserver",
+        "formulahendry.auto-rename-tag",
+        "zignd.html-css-class-completion",
+        "christian-kohler.path-intellisense",
+        "jakewilson.vscode-cdnjs",
+        "lonefy.vscode-js-css-html-formatter",
+        "oderwat.indent-rainbow",
+        "alexdima.copy-relative-path",
+        "shan.code-settings-sync",
+        "yoyoys.fake-img-snippet-collection",
+        "jaydenlin.google-complete-me",
+        "ritwickdey.live-sass",
+        "mrmlnc.vscode-scss",
+        "lukazakrajsek.scss-refactoring",
+        "rebornix.ruby",
+        "bung87.rails",
+        "zneuray.erb-vscode-snippets",
+        "wayou.vscode-todo-highlight",
+        "bung87.vscode-gemfile",
+        "ms-mssql.mssql",
+        "alexcvzz.vscode-sqlite",
+        "alexdima.copy-relative-path",
+        "sporiley.css-auto-prefix",
+        "janne252.fontawesome-autocomplete",
+        "bradgashler.htmltagwrap",
+        "codezombiech.gitignore"
+    ]
+}

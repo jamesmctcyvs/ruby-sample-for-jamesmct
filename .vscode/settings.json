@@ -1,0 +1,51 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    //-------- Search configuration --------
+    // Configure glob patterns for excluding files and folders in searches. Inherits all glob patterns from the files.exclude setting.
+    // "search.exclude": {
+    //     "**/node_modules": true,
+    //     "**/bower_components": true
+    // },
+    //-------- Files configuration --------
+    // Configure glob patterns for excluding files and folders.
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true,
+        "**/bin": true,
+        "**/lib/assets": true,
+        "**/log": true,
+        "**/test": true,
+        "**/tmp": true,
+        "**/vendor": true,
+        "**/mailers": true,
+        "**/jobs": true,
+        "**/vendor": true,
+        "**/channels": true,
+        "**/*.keep": true,
+        "**/Rakefile": true,
+        "**/README*": true,
+        "**/config.ru": true,
+        "**/package.json": true,
+        "**/config/*.yml": true,
+        "**/config/environments": true,
+        "**/config/initializers": true,
+        "**/config/locales": true,
+        "**/config/application.rb": true,
+        "**/config/boot.rb": true,
+        "**/config/environment.rb": true,
+        "**/config/puma.rb": true,
+        "**/config.ru": true,
+        "**/Gemfile.lock": true,
+        "**/package.json": true,
+        "**/Rakefile": true,
+        "**/README*": true,
+        "**/assets": true,
+        "**/concerns": true
+    },
+    "editor.fontWeight": "600",
+    "editor.fontSize": 24,
+    "files.autoSave": "onFocusChange"
+}
+

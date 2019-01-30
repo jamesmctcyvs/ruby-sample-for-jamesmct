@@ -1,0 +1,72 @@
+
+<div class="container">
+  <div class="row">
+
+    <% if @restaurant.errors.present? %>
+      <ul>
+        <% @restaurant.errors.each do |error, message| %>
+          <li> <%= "#{error.capitalize} #{message}" %></li>
+        <% end %>
+      </ul>
+    <% end %>
+
+    <div class="col-xs-12 col-sm-6" col-sm-offset-3>
+      <div class="page-header">
+          <h1>新增</h1>
+      </div>
+      <%= form_for([:admin, @restaurant], {method:"patch", class:"form-horizontal"}) do |f| %>
+        <div class="form-group form-group-lg">
+            <div class="col-xs-12 col-sm-3">
+                <%= f.label :name, "Name", {class:"control-label"} %>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <%= f.text_field :name, {class:"form-control"} %>
+            </div>
+        </div>
+        
+        <div class="form-group form-group-lg">
+            <div class="col-xs-12 col-sm-3">
+                <%= f.label :tel, "Tel", {class:"control-label"} %>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <%= f.text_field :tel, {class:"form-control"} %>
+            </div>
+        </div>
+        
+        <div class="form-group form-group-lg">
+            <div class="col-xs-12 col-sm-3">
+                <%= f.label :description, "description", {class:"control-label"} %>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <%= f.text_field :description, {class:"form-control"} %>
+            </div>
+        </div>
+        
+        <div class="form-group form-group-lg">
+            <div class="col-xs-12 col-sm-3">
+                <%= f.label :address, "address", {class:"control-label"} %>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <%= f.text_field :address, {class:"form-control"} %>
+            </div>
+        </div>
+        
+        <div class="form-group form-group-lg">
+            <div class="col-xs-12 col-sm-3">
+                <%= f.label :opening_hours, "opening_hours", {class:"control-label"} %>
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <%= f.text_field :opening_hours, {class:"form-control"} %>
+            </div>
+        </div>
+        
+        <div class="form-group form-group-lg">
+            <div class="col-sm-9 col-sm-offset-3 text-center">
+                <%= f.submit "新增", {class:"btn btn-info"} %>
+
+            </div>
+        </div>
+      <% end %>
+    </div>
+  </div><!-- Row -->
+</div><!--Container -->

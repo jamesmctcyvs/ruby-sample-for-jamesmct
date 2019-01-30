@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+          <div class="thumbnail">
+            <div class="caption">
+              <h2>
+                <%= @restaurant.name %>
+              </h2>
+              <p>
+                <%= @restaurant.tel%>
+              </p>
+              <p>
+                <%= @restaurant.address%>
+              </p>
+              <div class="linkRow">
+                <%= link_to("Edit", edit_admin_restaurant_path(id: @restaurant.id), {method:"get", class:"btn btn-info btn-block"})%>
+                
+              </div>
+              <!--linkRow-->
+            </div>
+            <!--caption-->
+          </div>
+          <!-- thumbnail-->
+    </div>
+  </div><!-- Row -->
+</div><!--Container -->
+
