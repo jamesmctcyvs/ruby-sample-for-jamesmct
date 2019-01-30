@@ -40,7 +40,6 @@
         "**/package.json": true,
         "**/Rakefile": true,
         "**/README*": true,
-        "**/assets": true,
         "**/concerns": true
     },
     "editor.fontWeight": "600",
